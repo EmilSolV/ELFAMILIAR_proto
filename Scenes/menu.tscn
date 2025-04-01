@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://tv36s28b07fx"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_qncue"]
+[ext_resource type="Texture2D" uid="uid://dljqewh1i1a57" path="res://Assets/Pack/2-MENU_TWITCHING/1.png" id="2_yttc8"]
+[ext_resource type="Texture2D" uid="uid://bb06m2qlmmvig" path="res://Assets/Pack/2-MENU_TWITCHING/2.png" id="3_cu70h"]
+[ext_resource type="Texture2D" uid="uid://dm23c31eme1mo" path="res://Assets/Pack/2-MENU_TWITCHING/3.png" id="4_jvk64"]
+[ext_resource type="Texture2D" uid="uid://c2mu765dydgi7" path="res://Assets/Pack/2-MENU_TWITCHING/4.png" id="5_6dyon"]
+[ext_resource type="Texture2D" uid="uid://e235gcnxcjol" path="res://Assets/Pack/0-STATIC/1.png" id="6_i3xlm"]
+[ext_resource type="Texture2D" uid="uid://cdss6s4algs1a" path="res://Assets/Pack/0-STATIC/2.png" id="7_gjctq"]
+[ext_resource type="Texture2D" uid="uid://dl6cwk6xyruen" path="res://Assets/Pack/0-STATIC/3.png" id="8_4xur3"]
+[ext_resource type="Texture2D" uid="uid://c4811jhiovaps" path="res://Assets/Pack/0-STATIC/4.png" id="9_2kukp"]
+[ext_resource type="Texture2D" uid="uid://dnmxvbct4q3dl" path="res://Assets/Pack/0-STATIC/5.png" id="10_1snkf"]
+[ext_resource type="Texture2D" uid="uid://nlcss851aluk" path="res://Assets/Pack/0-STATIC/6.png" id="11_3x0na"]
+[ext_resource type="Texture2D" uid="uid://d3wooqki31dcm" path="res://Assets/Pack/0-STATIC/7.png" id="12_tr00f"]
+[ext_resource type="Texture2D" uid="uid://dvlmf1ik3pq8n" path="res://Assets/Pack/0-STATIC/8.png" id="13_1ikpo"]
+[ext_resource type="Texture2D" uid="uid://c304tloedo7f2" path="res://Assets/Pack/1-MAIN_TEXT/BUTTON01.png" id="14_2c2rw"]
+[ext_resource type="Texture2D" uid="uid://c4m7mun3k5e52" path="res://Assets/Pack/1-MAIN_TEXT/BUTTON02.png" id="15_i626q"]
+[ext_resource type="Texture2D" uid="uid://b4gj5cewa2b7v" path="res://Assets/Pack/1-MAIN_TEXT/SET_.png" id="16_s3le4"]
+[ext_resource type="AudioStream" uid="uid://j824mpd1oqv0" path="res://Assets/Pack/9-AUDIO/darkness music.wav" id="17_jx1cy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjiuo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yttc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cu70h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jvk64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6dyon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yttc8")
+}],
+"loop": false,
+"name": &"Movement",
+"speed": 9.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns1w7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_i3xlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gjctq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4xur3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2kukp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1snkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3x0na")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tr00f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1ikpo")
+}],
+"loop": true,
+"name": &"Static",
+"speed": 13.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d32u0"]
+font_size = 48
+font_color = Color(1, 1, 1, 0.470588)
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_qncue")
+
+[node name="Animations" type="AnimatedSprite2D" parent="."]
+position = Vector2(577.25, 324.75)
+scale = Vector2(0.905859, 0.909028)
+sprite_frames = SubResource("SpriteFrames_mjiuo")
+animation = &"Movement"
+frame = 4
+frame_progress = 1.0
+
+[node name="Static" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.278431)
+position = Vector2(568, 331)
+sprite_frames = SubResource("SpriteFrames_ns1w7")
+animation = &"Static"
+
+[node name="new_game" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 325.0
+offset_right = 304.0
+offset_bottom = 384.0
+icon = ExtResource("14_2c2rw")
+
+[node name="continue" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 396.0
+offset_right = 304.0
+offset_bottom = 455.0
+icon = ExtResource("15_i626q")
+
+[node name="Set" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(55, 354)
+texture = ExtResource("16_s3le4")
+
+[node name="Set2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(55, 425)
+texture = ExtResource("16_s3le4")
+
+[node name="title" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 47.0
+offset_right = 329.0
+offset_bottom = 132.0
+text = "EL FAMILIAR"
+label_settings = SubResource("LabelSettings_d32u0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_jx1cy")
+autoplay = true
+
+[connection signal="mouse_entered" from="new_game" to="." method="_on_new_game_mouse_entered"]
+[connection signal="mouse_exited" from="new_game" to="." method="_on_new_game_mouse_exited"]
+[connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
+[connection signal="mouse_entered" from="continue" to="." method="_on_continue_mouse_entered"]
+[connection signal="mouse_exited" from="continue" to="." method="_on_continue_mouse_exited"]
+[connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

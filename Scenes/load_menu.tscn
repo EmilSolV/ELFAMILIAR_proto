@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://br1yoklsge2ob"]
+
+[ext_resource type="Texture2D" uid="uid://r8hwe1drcs52" path="res://Assets/Pack/2.5-START_TO_END/NEWSPAPER.png" id="1_31oks"]
+
+[node name="LoadMenu" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(574.25, 333.5)
+scale = Vector2(0.909766, 0.923611)
+texture = ExtResource("1_31oks")

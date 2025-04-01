@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://tv36s28b07fx"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_qncue"]
+[ext_resource type="Script" uid="uid://cp6urphwnh5rc" path="res://Scripts/menu.gd" id="1_qncue"]
 [ext_resource type="Texture2D" uid="uid://dljqewh1i1a57" path="res://Assets/Pack/2-MENU_TWITCHING/1.png" id="2_yttc8"]
 [ext_resource type="Texture2D" uid="uid://bb06m2qlmmvig" path="res://Assets/Pack/2-MENU_TWITCHING/2.png" id="3_cu70h"]
 [ext_resource type="Texture2D" uid="uid://dm23c31eme1mo" path="res://Assets/Pack/2-MENU_TWITCHING/3.png" id="4_jvk64"]
@@ -81,8 +81,8 @@ font_color = Color(1, 1, 1, 0.470588)
 script = ExtResource("1_qncue")
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
-position = Vector2(577.25, 324.75)
-scale = Vector2(0.905859, 0.909028)
+position = Vector2(960.518, 540.483)
+scale = Vector2(1.54459, 1.5371)
 sprite_frames = SubResource("SpriteFrames_mjiuo")
 animation = &"Movement"
 frame = 4
@@ -90,39 +90,41 @@ frame_progress = 1.0
 
 [node name="Static" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.278431)
-position = Vector2(568, 331)
+position = Vector2(951.268, 546.733)
+scale = Vector2(1.70511, 1.69093)
 sprite_frames = SubResource("SpriteFrames_ns1w7")
 animation = &"Static"
 
 [node name="new_game" type="Button" parent="."]
-offset_left = 87.0
-offset_top = 325.0
-offset_right = 304.0
-offset_bottom = 384.0
+offset_left = 67.0
+offset_top = 763.0
+offset_right = 284.0
+offset_bottom = 822.0
 icon = ExtResource("14_2c2rw")
 
 [node name="continue" type="Button" parent="."]
-offset_left = 87.0
-offset_top = 396.0
-offset_right = 304.0
-offset_bottom = 455.0
+offset_left = 66.0
+offset_top = 852.0
+offset_right = 283.0
+offset_bottom = 911.0
 icon = ExtResource("15_i626q")
 
 [node name="Set" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(55, 354)
+position = Vector2(48.5, 794)
 texture = ExtResource("16_s3le4")
 
 [node name="Set2" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(55, 425)
+position = Vector2(48.5, 882)
 texture = ExtResource("16_s3le4")
 
 [node name="title" type="Label" parent="."]
-offset_left = 32.0
-offset_top = 47.0
-offset_right = 329.0
-offset_bottom = 132.0
+offset_left = 40.0
+offset_top = 54.0
+offset_right = 337.0
+offset_bottom = 139.0
+scale = Vector2(1.56785, 1.87013)
 text = "EL FAMILIAR"
 label_settings = SubResource("LabelSettings_d32u0")
 

@@ -1,10 +1,24 @@
 [gd_scene load_steps=2 format=3 uid="uid://br1yoklsge2ob"]
 
-[ext_resource type="Texture2D" uid="uid://r8hwe1drcs52" path="res://Assets/Pack/2.5-START_TO_END/NEWSPAPER.png" id="1_31oks"]
+[ext_resource type="Texture2D" uid="uid://1b8gia13ufkm" path="res://Assets/Backgrounds/load_menu.jpeg" id="1_h2gvq"]
 
 [node name="LoadMenu" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(574.25, 333.5)
-scale = Vector2(0.909766, 0.923611)
-texture = ExtResource("1_31oks")
+position = Vector2(967.719, 555.609)
+scale = Vector2(1.51519, 1.56655)
+texture = ExtResource("1_h2gvq")
+
+[node name="Loading" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 860.0
+offset_right = 158.0
+offset_bottom = 883.0
+scale = Vector2(4.2911, 5.87037)
+text = "Entrando..."
+
+[node name="Camera" type="Node2D" parent="."]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="Camera"]
+position = Vector2(959, 542)
